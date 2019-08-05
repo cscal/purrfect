@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block head %}
+     {{ super()  }}
+     <link rel="stylesheet" type="text/css" href="static/styles.css">
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <form action="/login" method="post">
+            <div class="row">
+                <div class="form-group col-sm">
+                    <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username"          type="text"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm">
+                    <input class="form-control" name="password" placeholder="Password" type="password"/>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Log In</button>
+        </form>
+    </div>
+{% endblock %}

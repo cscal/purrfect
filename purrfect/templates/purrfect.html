@@ -1,7 +1,11 @@
+
 {% extends "layout.html" %}
 
-{% block title %}
-    Home
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    {{ super()  }}
+    <link rel="stylesheet" type="text/css" href="static/purrfect.css">
 {% endblock %}
 
 {% block main %}
@@ -13,9 +17,11 @@
 				    <h1>Purrfect Match</h1>
 					<h3>The Only Human-Feline Dating App</h3>
 					<hr>
-					<button class ="btn btn-default btn-lg"><i class="fa fa-paw"></i> Get Started!</button>
 				</div>
-			</div>
+			    <div id="button">
+                    <a class="btn btn-light btn-lg" href="/register" role="button"><i class="fa fa-paw"></i> Get Started!</a>
+			    </div>
+            </div>
 		</div>
 	</div>
 
